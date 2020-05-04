@@ -13,6 +13,8 @@ import net.minecraftforge.registries.ObjectHolder;
 public class ItemInit
 {
     //TODO: add transmogrified elements (kinda like: earth, air, fire, water, spirit , electric)
+    //TODO: add crustal of ithecles
+
     //normal items
     public static final Item uto_generic_apple = null;
     public static final Item uto_generic_bowl = null;
