@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "IiI",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "uto:uto_generic_ingot"
+    },
+    "i": {
+      "item": "minecraft:apple"
+    }
+  },
+  "result": {
+    "item": "uto:uto_generic_apple",
+    "count": 1
+  }
+}
