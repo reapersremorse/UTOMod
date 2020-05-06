@@ -25,3 +25,7 @@ run
 
 # Files from Forge MDK
 forge*changelog.txt
+
+#Mods
+src/main/java/com/modsmaybelol/*
+src/main/java/com/mods*
