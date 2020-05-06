@@ -14,8 +14,9 @@ out
 .idea
 
 # gradle
-build
+build*
 .gradle
+build.properties
 
 # other
 eclipse
