@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "ABA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:white_concrete_powder"
+    },
+    "B": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "C": {
+      "item": "minecraft:redstone"
+    },
+    "D": {
+      "item": "minecraft:bone_block"
+    }
+  },
+
+  "result": {
+    "item": "uto:uto_covalence_dust_white",
+    "count": 5
+  }
+}

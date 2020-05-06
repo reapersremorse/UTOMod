@@ -1,31 +1,40 @@
 package com.reapersremorse.uto.prefabs.ItemPrefabs;
 
-import com.reapersremorse.uto.init.ItemInit;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.world.World;
-
-import javax.annotation.Nullable;
-import java.util.List;
 
 public class UTOContainerItem extends Item
 {
-    //TODO: make it so i can change all attributes of an item aswell as add tooltips to items in 1 line of code in the init class.
+    //TODO: make RepairItemRecipe much more elaborate
     public UTOContainerItem
-            (Properties properties) {
-        super(properties);
+            (Properties properties) { super(properties); }
+
+    @Override
+    public boolean hasEffect(ItemStack stack){return true;}
+
+    @Override
+    public void setDamage(ItemStack stack, int damage){}
+
+    @Override
+    public boolean isRepairable(ItemStack stack) {
+        return super.isRepairable(stack);
     }
 
     @Override
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        super.addInformation(stack, worldIn, tooltip, flagIn);
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return super.getIsRepairable(toRepair, repair);
     }
 
     @Override
-    public boolean hasEffect(ItemStack stack) {
-        return true;
-    }
+    public boolean hasContainerItem(ItemStack stack){return true;}
 
+    @Override
+    public ItemStack getContainerItem(ItemStack itemStack)
+    {
+        if (!hasContainerItem(itemStack))
+        {
+            return ItemStack.EMPTY;
+        }
+        return new ItemStack(getItem());
+    }
 }

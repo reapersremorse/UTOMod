@@ -17,6 +17,7 @@ import org.apache.logging.log4j.Logger;
 @Mod("uto")
 public class UTOMod
 {
+    //TODO: not a todo, forge version = forge-1.15.2-31.1.63-mdk.zip , mc version = 1.15.2, mappings should be as up to date as possible.
     private static final Logger LOGGER = LogManager.getLogger();
     public static final  String MOD_ID = "uto";
     public static UTOMod instance;

@@ -3,8 +3,13 @@ package com.reapersremorse.uto.init;
 import com.reapersremorse.uto.UTOMod;
 import com.reapersremorse.uto.init.groups.UTOItemGroup;
 import com.reapersremorse.uto.prefabs.ItemPrefabs.UTOContainerItem;
+import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
+import net.minecraft.util.IItemProvider;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -53,19 +58,19 @@ public class ItemInit
     public static void registerItems(final RegistryEvent.Register <Item> event)
     {
         //regular items
-        event.getRegistry().register(new Item(new Item.Properties().group(UTOItemGroup.instance)).setRegistryName("uto_generic_apple"));
-        event.getRegistry().register(new Item(new Item.Properties().group(UTOItemGroup.instance)).setRegistryName("uto_generic_bowl"));
-        event.getRegistry().register(new UTOContainerItem(new Item.Properties().group(UTOItemGroup.instance)).setRegistryName("uto_generic_eye"));
-        event.getRegistry().register(new Item(new Item.Properties().group(UTOItemGroup.instance)).setRegistryName("uto_generic_fuel"));
-        event.getRegistry().register(new Item(new Item.Properties().group(UTOItemGroup.instance)).setRegistryName("uto_generic_gem"));
-        event.getRegistry().register(new Item(new Item.Properties().group(UTOItemGroup.instance)).setRegistryName("uto_generic_ingot"));
-        event.getRegistry().register(new Item(new Item.Properties().group(UTOItemGroup.instance)).setRegistryName("uto_generic_nugget"));
-        event.getRegistry().register(new Item(new Item.Properties().group(UTOItemGroup.instance)).setRegistryName("uto_generic_pearl"));
-        event.getRegistry().register(new Item(new Item.Properties().group(UTOItemGroup.instance)).setRegistryName("uto_generic_rod"));
-        event.getRegistry().register(new Item(new Item.Properties().group(UTOItemGroup.instance)).setRegistryName("uto_generic_slime_ball"));
-        event.getRegistry().register(new Item(new Item.Properties().group(UTOItemGroup.instance)).setRegistryName("uto_generic_stick"));
-        event.getRegistry().register(new Item(new Item.Properties().group(UTOItemGroup.instance)).setRegistryName("uto_generic_string"));
-        event.getRegistry().register(new Item(new Item.Properties().group(UTOItemGroup.instance)).setRegistryName("uto_generic_dust"));
+        event.getRegistry().register(new Item(new Item.Properties().maxStackSize(64).group(UTOItemGroup.instance).food(new Food.Builder().setAlwaysEdible().fastToEat().meat().hunger(100).saturation(100.0f).effect(new EffectInstance(Effects.ABSORPTION, 6000, 5), 0.7f).build())).setRegistryName("uto_generic_apple"));
+        event.getRegistry().register(new Item(new Item.Properties().maxStackSize(64).group(UTOItemGroup.instance)).setRegistryName("uto_generic_bowl"));
+        event.getRegistry().register(new Item(new Item.Properties().maxStackSize(64).group(UTOItemGroup.instance)).setRegistryName("uto_generic_eye"));
+        event.getRegistry().register(new Item(new Item.Properties().maxStackSize(64).group(UTOItemGroup.instance)).setRegistryName("uto_generic_fuel"));
+        event.getRegistry().register(new Item(new Item.Properties().maxStackSize(64).group(UTOItemGroup.instance)).setRegistryName("uto_generic_gem"));
+        event.getRegistry().register(new Item(new Item.Properties().maxStackSize(64).group(UTOItemGroup.instance)).setRegistryName("uto_generic_ingot"));
+        event.getRegistry().register(new Item(new Item.Properties().maxStackSize(64).group(UTOItemGroup.instance)).setRegistryName("uto_generic_nugget"));
+        event.getRegistry().register(new Item(new Item.Properties().maxStackSize(64).group(UTOItemGroup.instance)).setRegistryName("uto_generic_pearl"));
+        event.getRegistry().register(new Item(new Item.Properties().maxStackSize(64).group(UTOItemGroup.instance)).setRegistryName("uto_generic_rod"));
+        event.getRegistry().register(new Item(new Item.Properties().maxStackSize(64).group(UTOItemGroup.instance)).setRegistryName("uto_generic_slime_ball"));
+        event.getRegistry().register(new Item(new Item.Properties().maxStackSize(64).group(UTOItemGroup.instance)).setRegistryName("uto_generic_stick"));
+        event.getRegistry().register(new Item(new Item.Properties().maxStackSize(64).group(UTOItemGroup.instance)).setRegistryName("uto_generic_string"));
+        event.getRegistry().register(new Item(new Item.Properties().maxStackSize(64).group(UTOItemGroup.instance)).setRegistryName("uto_generic_dust"));
 
         //covalence dusts
         event.getRegistry().register(new Item(new Item.Properties().group(UTOItemGroup.instance)).setRegistryName("uto_covalence_dust_white"));
